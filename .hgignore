@@ -1,0 +1,8 @@
+bin/
+build/
+PythonScript/.tmp
+CMakeLists.txt.user
+
+syntax: glob
+*.pyc
+*.md5
