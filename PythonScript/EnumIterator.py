@@ -266,7 +266,7 @@ def processEnumFile( fullPath, fileName ):
 			enumsByValue[values['value']] = values['name']
 			enumsByString[values['name']] = values['value']
 
-		sortedByString = sorted( enumsByString.keys(), key=lambda x:x.lower() )
+		sortedByString = sorted( enumsByString.keys(), key=lambda x: map(ord,x) )
 
 		# Sort enums by value and by string.
 		enumKeys = enumsByValue.keys()
