@@ -75,6 +75,7 @@ cppHeader = \
 
 #include <algorithm>
 #include <stdexcept>
+#include <string>
 
 const std::string BLANKSTRING = "";
 """
