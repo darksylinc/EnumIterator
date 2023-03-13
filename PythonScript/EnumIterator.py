@@ -286,9 +286,10 @@ def processEnumFile( fullPath, fileName ):
 
 		outputStr += cppArrayDeclaration0.format( className, len( enumsByValue ) )
 
-		for enumString in sortedByString:
+		enumValues = enumsByValue.values()
+		for enumString in enumValues:
 			outputStr += '{0}Enum::EnumData( {1},		"{1}" ),//\n'.format( className, enumString )
-		outputStr += '{0}Enum::EnumData( {1},		"__INVALID" )\n'.format( className, sortedByString[-1] )
+		outputStr += '{0}Enum::EnumData( {1},		"__INVALID" )\n'.format( className, enumValues[-1] )
 
 		outputStr += cppArrayDeclaration1.format( className, len( enumsByValue ) )
 
